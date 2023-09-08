@@ -1,0 +1,94 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 12px;
+  width: 50rem;
+  position: relative;
+  padding: 6.4rem;
+}
+
+.advice-number {
+  color: hsl(150, 100%, 66%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  margin-top: -2.4rem;
+}
+
+.advice-text {
+  font-size: 2.4rem;
+  font-weight: 800;
+  padding: 0 2.4rem 1.2rem;
+  text-align: center;
+}
+
+.advice-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: -3rem;
+
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  padding: 1.8rem;
+  border-radius: 100px;
+
+  transition: box-shadow 100ms, transform 100ms;
+}
+
+.advice-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 24px hsl(150, 100%, 66%);
+  transform: translateY(-2.5px);
+}
+
+.advice-btn:active {
+  cursor: pointer;
+  box-shadow: 0 0 18px hsl(150, 100%, 66%);
+  transform: translateY(0);
+}
+
+.divider {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 525px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .advice-text {
+    padding: 0;
+  }
+
+  .advice-btn {
+    transform: scale(0.85) !important;
+  }
+
+  .advice-btn:hover {
+    transform: scale(0.85) translateY(-2.5px) !important;
+  }
+}
