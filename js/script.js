@@ -12,10 +12,10 @@ const getRandomNumber = function () {
 const getAdvice = async function () {
   try {
     res = await fetch(`https://api.adviceslip.com/advice/${getRandomNumber()}`);
+
+    if (!res.ok) throw new Error("Something went wrong when fetching API");
+
     data = await res.json();
-
-    if (!data) throw new Error("Something went wrong when fetching API");
-
     id = await data.slip.id;
     advice = await data.slip.advice;
   } catch (error) {
